@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '7.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./ApiAiBlazorLab/ApiAiBlazorLab.csproj
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build ./ApiAiBlazorLab/ApiAiBlazorLab.csproj --no-restore
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./ApiAiBlazorLab.Tests/ApiAiBlazorLab.Tests.csproj --no-build --verbosity normal
